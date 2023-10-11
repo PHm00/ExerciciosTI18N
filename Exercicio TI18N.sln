@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio TI18N", "Exercicio TI18N\Exercicio TI18N.csproj", "{B318EDBD-864D-4E2D-AF9E-E941444CD818}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B318EDBD-864D-4E2D-AF9E-E941444CD818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B318EDBD-864D-4E2D-AF9E-E941444CD818}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B318EDBD-864D-4E2D-AF9E-E941444CD818}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B318EDBD-864D-4E2D-AF9E-E941444CD818}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46714175-F381-4521-8575-12797E031A0D}
+	EndGlobalSection
+EndGlobal
