@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Schema;
 
 namespace Exercicio_TI18N
 {
@@ -12,10 +13,10 @@ namespace Exercicio_TI18N
         public ModelExercicio() {
 
         }//fim consultar
-        
+
         public double MediaDuasNotas(double nota1, double nota2)
-        { 
-            return(nota1 + nota2); 
+        {
+            return (nota1 + nota2);
         }//fim
 
 
@@ -54,11 +55,41 @@ namespace Exercicio_TI18N
             return num - 1;
         }//fim Antecessor
 
-        public double AreaRetangulo(double numA, double numB) 
+        public double AreaRetangulo(double bas, double alt)
         {
-            return numA * numB;
+            return bas * alt;
+        }//fim metodo
+
+        public double PorcentagemVotos(double votos, double total)
+        {
+            return (votos * 100) / total;
         }
 
+        public Boolean Validar(double num)
+        {
+            if (num < 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }//fim validar
+
+        }//fim
+        public Boolean salarioReajuste(double num1)
+        {
+            if (num1 < 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            } 
+                    
+        }//fim 
+                        
     }
 
 }
