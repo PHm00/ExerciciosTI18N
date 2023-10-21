@@ -39,6 +39,9 @@ namespace Exercicio_TI18N
                                "8. Exercicio 08\n" +
                                "9. Exercicio 09\n" +
                                "10.Exercicio 10\n" +
+                               "11.Exercicio 11\n" +
+                               "12.Exercicio 12\n" +
+                               "13.Exercicio 13\n" +
                                "Escola uma das opções acima: ");
             ConsultarOpcao = Convert.ToInt32(Console.ReadLine());
         }//menu
@@ -83,7 +86,7 @@ namespace Exercicio_TI18N
                         //chamar metodo media 
                         Console.WriteLine("A média das duas notas é: " + exercicio.MediaDuasNotas(nota1, nota2));
                         break;
-                   
+
                     case 2:
                         Console.WriteLine("Informe um número: ");
                         int num1 = Convert.ToInt32(Console.ReadLine());
@@ -113,18 +116,18 @@ namespace Exercicio_TI18N
                                 Console.WriteLine("erro informe um valor positivo");
                             }
                         } while (bas < 0);
-                        do 
-                        { 
-                        
-                        Console.WriteLine("informe a altura do retângulo: ");
-                        alt = Convert.ToDouble(Console.ReadLine());
+                        do
+                        {
+
+                            Console.WriteLine("informe a altura do retângulo: ");
+                            alt = Convert.ToDouble(Console.ReadLine());
                             if (alt < 0)
                             {
                                 Console.WriteLine("erro informe um valor positivo");
                             }
                         } while (alt < 0);
                         //mostrar mensagem tela
-                        Console.WriteLine("area do retângulo é: " + exercicio.AreaRetangulo(bas,alt));
+                        Console.WriteLine("area do retângulo é: " + exercicio.AreaRetangulo(bas, alt));
                         break;
                     case 5:
                         double totalEleitores;
@@ -172,7 +175,7 @@ namespace Exercicio_TI18N
                             }
                         } while (exercicio.Validar(brancos) == false);
 
-                        if(brancos+validos+nulos == totalEleitores)
+                        if (brancos + validos + nulos == totalEleitores)
                         {
                             Console.WriteLine("\nHá " + exercicio.PorcentagemVotos(brancos, totalEleitores) + "% de votos brancos"
                                               + "\nHá " + exercicio.PorcentagemVotos(nulos, totalEleitores) + "% de votos nulos"
@@ -193,22 +196,22 @@ namespace Exercicio_TI18N
                         {
                             Console.WriteLine("informe o salário: ");
                             salario = Convert.ToDouble(Console.ReadLine());
-                            if (exercicio.AjusteSalario(salario) == false) 
+                            if (exercicio.Validar(salario) == false)
                             {
                                 Console.WriteLine("informe um valor positivo");
                             }
 
 
-                        } while (exercicio.AjusteSalario(salario) == false);
+                        } while (exercicio.Validar(salario) == false);
                         do
                         {
                             Console.WriteLine("informe o percentual de reajuste: ");
                             pReajuste = Convert.ToDouble(Console.ReadLine());
-                            if (exercicio.AjusteSalario(pReajuste) == false)
+                            if (exercicio.Validar(pReajuste) == false)
                             {
                                 Console.WriteLine("informe um valor positivo");
                             }
-                        } while (exercicio.AjusteSalario(pReajuste) == false);
+                        } while (exercicio.Validar(pReajuste) == false);
 
 
                         Console.WriteLine("o novo salário é: R$ " + exercicio.AjusteSalario(salario, pReajuste));
@@ -231,7 +234,7 @@ namespace Exercicio_TI18N
                         } while (impostos <= 0);
 
                         do
-                        { 
+                        {
                             Console.WriteLine("informe o percentual do distribuidor: ");
                             distribuidor = Convert.ToDouble(Console.ReadLine());
                             if (distribuidor < 0)
@@ -255,8 +258,8 @@ namespace Exercicio_TI18N
                         Console.WriteLine("o custo final é : R$" + exercicio.CustoCarro(impostos, distribuidor, custoFabrica));
 
                         break;
-                        
-                        
+
+
                     case 8:
                         double numeroCarros;
                         double totalVendas;
@@ -329,12 +332,12 @@ namespace Exercicio_TI18N
                         {
                             Console.WriteLine("informe a primeira nota: ");
                             notaA = Convert.ToDouble(Console.ReadLine());
-                            if (notaA <0)
+                            if (notaA < 0)
                             {
                                 Console.WriteLine("informe uma nota de 0 a 10");
                             }
-                        }while (notaA < 0);
-                        
+                        } while (notaA < 0);
+
                         do
                         {
                             Console.WriteLine("informe a segunda nota: ");
@@ -344,7 +347,7 @@ namespace Exercicio_TI18N
                                 Console.WriteLine("informe uma nota de 0 a 10");
                             }
                         } while (notaB < 0);
-                        
+
                         do
                         {
                             Console.WriteLine("informe a terceira nota: ");
@@ -375,25 +378,137 @@ namespace Exercicio_TI18N
                                 {
                                     Console.WriteLine("Você vai para conselho");
                                 }
-                                else 
-                                { 
+                                else
+                                {
                                     Console.WriteLine("Você está aprovado");
                                 }
                             }
                         }//fim repita
-               
+
                         break;//fim exercicio
                     case 10:
-                               "1. Exercicio 01\n" +
-                               "2. Exercicio 02\n" +
-                               "3. Exercicio 03\n" +
-                               "4. Exercicio 04\n" +
+
+                        double opcao;
+
+                        do
+                        {
+                            Console.WriteLine(
+                               "1. Verde    \n" +
+                               "2. Azul     \n" +
+                               "3. Amarelo  \n" +
+                               "4. Vermelho \n" +
+                               "Escolha uma das opções acima: ");
+                            opcao = Convert.ToDouble(Console.ReadLine());
+                            if ((opcao < 0) || (opcao > 4))
+                            {
+                                Console.WriteLine("informe um valor entre 1 e 4");
+                            }
+                        } while ((opcao < 0) & (opcao > 4));
+
+                        if (opcao == 1)
+                        {
+                            Console.WriteLine("R$ 10,00");
+                        }
+                        else
+                        {
+                            if (opcao == 2)
+                            {
+                                Console.WriteLine("R$ 20,00");
+                            }
+                            else
+                            {
+                                if (opcao == 3)
+                                {
+                                    Console.WriteLine("R$ 30,00");
+                                    Console.WriteLine("R$ 30,00");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("R$ 40,00");
+                                }
+                            }//
+
+                        }//
+
+                        break;
+                    case 11:
+
+                        double numero;
+
+                        Console.WriteLine("informe um número");
+                        numero = Convert.ToInt32(Console.ReadLine());
+
+                        if (numero % 2 == 0)
+                        {
+                            Console.WriteLine("o número é par");
+                        }
+                        else
+                        {
+                            Console.WriteLine("o número é impar");
+                        }
+                        break;
+                    case 12:
+                        double idade;
+                        do
+                        { Console.WriteLine("informe a idade");
+                            idade = Convert.ToDouble(Console.ReadLine());
+
+
+                            if (idade <= 0)
+                            {
+                                Console.WriteLine("a idade digitada não é valida");
+                            }
+                        } while (idade <= 0);
+
+
+                        if (idade >= 18)
+                        {
+                            Console.WriteLine("Maior de Idade");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Menor de Idade");
+                        }
+                        break;
+                    case 13:
+                        double num4;
+                        double num5;
+                        double num6;
+                        Console.WriteLine("informe um número");
+                        num4 = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("informe o segundo número");
+                        num5 = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("informe o terceiro número");
+                        num6 = Convert.ToDouble(Console.ReadLine());
+
+                        if (num4 > num5 && num4 > num6)
+                        {
+                            Console.WriteLine("o maior número é " + num4);
+                        }
+                        else
+                        { 
+                            if (num5 > num4 && num5 > num6)
+                            {
+                                Console.WriteLine("o maior número é " + num5);
+                            }
+                            else
+                            {
+                              if (num6 > num4 && num6 > num5)
+                                {
+                                    Console.WriteLine("o maior número é " + num6);
+                                }
+                            }//
+                        }//  
+
+                            break;
+                        case 14:
+                              
 
 
 
-
-                    break;
-
+                    
                     default:
                         Console.WriteLine("Opção escolhida não é válida");
                         break;
